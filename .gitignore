@@ -5,6 +5,8 @@ logs/
 __pycache__/
 core
 
+/data/
+
 # Compiled source #
 ###################
 *.com
@@ -14,6 +16,8 @@ core
 *.o
 *.so
 *.pyc
+*xml
+*iml
 
 # Packages #
 ############
