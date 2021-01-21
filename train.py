@@ -35,7 +35,7 @@ except ImportError: # will be 3.x series
 parser = argparse.ArgumentParser(description='Training')
 parser.add_argument('--gpu_ids',default='0', type=str,help='gpu_ids: e.g. 0  0,1,2  0,2')
 parser.add_argument('--name',default='ft_ResNet50', type=str, help='output model name')
-parser.add_argument('--data_dir',default='../Market/pytorch',type=str, help='training dir path')
+parser.add_argument('--data_dir',default='./data/Market/pytorch',type=str, help='training dir path')
 parser.add_argument('--train_all', action='store_true', help='use all training data' )
 parser.add_argument('--color_jitter', action='store_true', help='use color jitter in training' )
 parser.add_argument('--batchsize', default=32, type=int, help='batchsize')
@@ -50,6 +50,7 @@ parser.add_argument('--PCB', action='store_true', help='use PCB+ResNet50' )
 parser.add_argument('--fp16', action='store_true', help='use float16 instead of float32, which will save about 50% memory' )
 opt = parser.parse_args()
 
+print(os.listdir(opt.data_dir))
 fp16 = opt.fp16
 data_dir = opt.data_dir
 name = opt.name
